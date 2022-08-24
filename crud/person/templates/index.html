@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static './css/style.css' %}" type="text/css" />
+  <title>CRUD | Django</title>
+</head>
+<body>
+
+  <header>
+    <h1>CRUD Django Persons</h1>
+  </header>
+  
+  <main>
+    <div class="crud__title">
+      <h2>Persons number: {{no_persons}}</h2>
+      <button class="btn__create"><a href="new">Create Person</a></button> 
+    </div>
+    
+    <div class="container__card">
+      {% for person in persons %} 
+      <article class="card">
+        <div class="card__item">
+          <ul>
+            <li><span><b>Name:</b></span> {{person.name}}</li>
+            <li><span><b>Last Name:</b></span> {{person.lastname}}</li>
+            <li><span><b>Email:</b></span> {{person.email}}</li>
+          </ul>
+          <div class="card__item-btn">
+            <button class="btn__view"><a href="detail/{{person.id}}">View</a></button>
+            <button class="btn__edit"><a href="edit/{{person.id}}">Edit</a></button>
+            <button class="btn__del"><a href="delete/{{person.id}}">Delete</a></button>
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer__social">
+      <a href="https://github.com/3lvis-dev" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/elvis-alexander-espinoza-/" target="_blank">LinkedIn</a>
+      <a href="https://www.instagram.com/hypnos_insigne/?hl=es-la" target="_blank">Instagram</a>
+    </div>
+    <div>
+      <p>Created by. Elvis. A. Espinoza. F</p>
+    </div>
+  </footer>
+</body>
+</html>

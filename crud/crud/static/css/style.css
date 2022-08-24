@@ -1,0 +1,331 @@
+:root {
+  --header-footer-color: linear-gradient(135deg,#020381 0%,#2874fc 100%);
+  --card-color: linear-gradient(150deg, #0049de 32%, #FC00FF 100%);
+  --font-color: white;
+  --btn-create: #006611;
+  --btn-view: #0dcaf0;
+  --btn-edit: #ffc107;
+  --btn-del: #dc3545;
+}
+
+/* < ================ RESET STYLES ================ > */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+/* < ================ RESET STYLES END ================ > */
+
+
+
+/* < ================ HEADER ================ > */
+header {
+  background: var(--header-footer-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 150px;
+  font-size: 1.9rem;
+  color: var(--font-color);
+}
+/* < ================ HEADER END ================ > */
+
+
+
+/* < ================ HOME PAGE ================ > */
+/* < ================ MAIN CONTAINER ================ > */
+main {
+  background-color: black;
+  padding: 3rem;
+}
+
+/* < ---------------- Title and Primary Button ---------------- > */
+.crud__title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: var(--font-color);
+}
+
+.crud__title .btn__create {
+  background-color: var(--btn-create);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  max-width: 500px;
+  height: 70px;
+}
+
+.crud__title .btn__create:hover {
+  background-color: #198754;
+  cursor: pointer;
+}
+
+.crud__title .btn__create a {
+  padding: 20px 20px 20px 20px;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: var(--font-color);
+}
+
+
+/* < ---------------- CARDS ---------------- > */
+.container__card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+}
+
+.card {
+  background: var(--card-color);
+  border-radius: 10px;
+  padding: 3rem;
+  font-size: 1.6rem;
+  width: 60%;
+  height: 250px;
+}
+
+.card__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+  height: 100%;
+}
+
+.card__item ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+  list-style: none;
+}
+
+.card__item ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  height: 100%;
+}
+
+.card__item-btn {
+  display: flex;
+  justify-content: center;
+  max-width: 100px;
+  height: 20%;
+  gap: 1rem;
+}
+
+.card__item-btn button {
+  border: none;
+  border-radius: 1rem;
+  width: 90%;
+  height: 100%;
+  gap: 1rem;
+}
+.card__item-btn button:hover {
+  cursor: pointer;
+}
+
+.card__item-btn .btn__view {
+  background-color: var(--btn-view);
+}
+.card__item-btn .btn__edit {
+  background-color: var(--btn-edit);
+}
+.card__item-btn .btn__del {
+  background-color: var(--btn-del);
+}
+
+.card__item-btn button a {
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: var(--font-color);
+}
+/* < ================ MAIN CONTAINER END ================ > */
+/* < ================ HOME PAGE ================ > */
+
+
+
+/* < ================ FOOTER ================ > */
+footer {
+  background: var( --header-footer-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+  font-size: 1.8rem;
+  height: 100px;
+  gap: 1rem;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+footer a:hover {
+  cursor: pointer;
+  color: #FC00FF;
+}
+/* < ================ FOOTER END================ > */
+
+
+
+/* < ================ PAGES ================ > */
+.header__home {
+  color: var(--font-color);
+}
+
+.header__home a {
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--font-color);
+}
+.header__home a:hover {
+  cursor: pointer;
+  color: #FC00FF;
+}
+
+.container__pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.pages__content {
+  background: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 3rem;
+  font-size: 1.6rem;
+  color: var(--font-color);
+  width: 70%;
+  height: 300px;
+  gap: 1rem;
+}
+
+.pages__content form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  padding: 1rem;
+}
+
+.edit__btn {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.edit__btn button a{
+  text-decoration: none;
+  color: var(--font-color);
+}
+
+.pages__content form .btn__create {
+  background-color: var(--btn-create);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: var(--font-color);
+  padding: 2rem;
+  max-width: 300px;
+  height: 30px;
+}
+.pages__content form .btn__create:hover {
+  background-color: #198754;
+  cursor: pointer;
+}
+
+.pages__content form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.pages__content form input {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  height: 30px;
+}
+/* < ================ PAGES END ================ > */
+
+
+
+/* < ================ MQ Breakpoints Home (Responsive) ================ > */
+@media (min-width: 728px) {
+  .card {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .card {
+    min-width: 10%;
+  }
+}
+/* < ================ MQ Breakpoints Home (Responsive) END ================ > */
+
+
+
+/* < ================ MQ Breakpoints Pages (Responsive) ================ > */
+@media (min-width: 728px) {
+  .pages__content {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pages__content {
+    max-width: 30%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .pages__content {
+    min-width: 20%;
+  }
+}
+/* < ================ MQ Breakpoints Pages (Responsive) END ================ > */

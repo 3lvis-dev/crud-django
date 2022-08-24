@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD | Create</title>
+    <link rel="stylesheet" href="{% static './css/style.css' %}" type="text/css" />
+</head>
+<body>
+    <header>
+        <h2 class="header__home"><a href="{% url 'index' %}">Home</a></h2>
+    </header>
+
+    <main class="container__pages">
+        <div class="pages__content">
+            
+            <h2>Create Person</h2>
+            
+            <form method="POST">
+                <table>
+                    {{person_form}}
+                </table>
+                <div class="edit__btn"> 
+                    <button class="btn__create" type="submit">Create</button>
+                    <button class="btn__create" type="submit">
+                        <a href="{% url 'index' %}">Cancel</a>
+                    </button>
+                </div>
+                {% csrf_token %}
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer__social">
+            <a href="https://github.com/3lvis-dev" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/elvis-alexander-espinoza-/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/hypnos_insigne/?hl=es-la" target="_blank">Instagram</a>
+        </div>
+        <div>
+            <p>Created by. Elvis. A. Espinoza. F</p>
+        </div>
+    </footer>
+</body>
+</html>
